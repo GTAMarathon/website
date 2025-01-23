@@ -1,0 +1,88 @@
+:root{
+    --underline-thickness: 3px;
+    --highlight-color: #4fbafe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.75rem;
+    font-family: 'Century Gothic';
+    color: #fff;
+    background-color: #12222c;
+    background-image: url('../images/background.png');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.header{
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.text-block {
+    font-family: 'Century Gothic';
+    font-size: 1.75rem;
+    max-width: 100%;
+    width: 80%;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.thick-underline{
+    font-family: 'Europa Grotesk SH DemBol';
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    color: white;
+}
+
+.gtam{
+    font-family: 'Slope Opera';
+    font-weight: normal;
+}
+
+.highlight{
+    color: var(--highlight-color);
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.icon{
+    width: 150px;
+}
+
+.text-block p{
+    margin-bottom: 2rem;
+}
+
+@font-face {
+    font-family: 'Europa Grotesk SH DemBol';
+    src: url(../fonts/EuropaGroteskSH-DemBol.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
