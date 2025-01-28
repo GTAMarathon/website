@@ -3,8 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "GTAM2025",
-  description: "Join the fun and watch gtam!",
+  description: "Watch GTAM",
 };
+
+export const viewport = 'width=device-width, initial-scale=1';
 
 export default function RootLayout({
   children,
@@ -13,8 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <head>
+      </head>
+      <body className="antialiased">
+        <main>{children}</main>
       </body>
     </html>
   );

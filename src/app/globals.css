@@ -14,8 +14,26 @@
   }
 }
 
+@layer utilities {
+  .section-content-offset {
+    position: relative;
+    left: -50vw;
+    margin-right: -50vw;
+    width: calc(100% + 50vw);
+    min-height: 100%;
+  }
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #000 0%, #111 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .section-overlap {
+    margin-top: -10%;
+  }
 }
