@@ -13,9 +13,10 @@ interface SectionProps {
     left: number;
     right: number;
   };
+  backgroundOffset?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom }) => {
+const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset }) => {
   const sectionHeight = Math.max(top.left + bottom.left, top.right + bottom.right);
   const overlap = Math.max(top.left, top.right);
   const toPercent = (value: number) => (value / sectionHeight) * 100;
@@ -36,6 +37,9 @@ const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, childr
         style={{
           backgroundColor: backgroundColor,
           backgroundImage: `url(${imageSrc})`,
+          backgroundSize: "cover",
+          backgroundPosition: backgroundOffset || "center",
+          backgroundRepeat: "no-repeat",
           clipPath: `polygon(
             0 ${toPercent(top.left)}%,
             100% ${toPercent(top.right)}%,
@@ -45,10 +49,12 @@ const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, childr
           overflow: "visible",
         }}
       >
-        <div 
-        className="relative h-full flex items-center p-8"
-        style = {{pointerEvents: 'auto', zIndex: 20, transform: 'translateZ(0)'}}
-        >
+        <div className="relative h-full flex items-center p-8"
+        style={{
+          pointerEvents: 'auto',
+          zIndex: 20,
+          transform: 'translateZ(0)'
+        }}>
           <div className="max-w-4xl mx-auto w-full relative">
             {children}
           </div>

@@ -14,6 +14,19 @@
   }
 }
 
+a {
+  pointer-events: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #000 0%, #111 100%);
+}
+
 @layer utilities {
   .section-content-offset {
     position: relative;
@@ -24,16 +37,59 @@
   }
 }
 
-body {
-  background: linear-gradient(to bottom, #000 0%, #111 100%);
+@media (max-width: 1200px) { html { font-size: 90%; } }
+@media (max-width: 900px)  { html { font-size: 80%; } }
+@media (max-width: 600px)  { html { font-size: 70%; } }
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-html {
-  scroll-behavior: smooth;
+section {
+  isolation: auto !important;
 }
 
-@layer utilities {
-  .section-overlap {
-    margin-top: -10%;
+@media (max-width: 768px) {
+  .section-content {
+    position: relative !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    padding: 0 1rem !important;
   }
+  
+  .mobile-scale {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@font-face {
+  font-family: 'EuropaGrotesk';
+  src: url('/fonts/EuropaGroteskSH-DemBol.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('/fonts/centurygothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SlopeOpera';
+  src: url('/fonts/SLOPE OPERA.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

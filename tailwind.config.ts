@@ -15,6 +15,12 @@ export default {
       height: {
         '17': '4.25rem',
         '18': '4.5rem',
+      },
+      fontFamily: {
+        'bebasneue': ['BebasNeue'],
+        'europagrotesk': ['EuropaGrotesk'],
+        'centurygothic': ['CenturyGothic'],
+        'slopeopera': ['SlopeOpera'],
       }
     },
   },
