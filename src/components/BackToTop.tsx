@@ -31,6 +31,7 @@ const BackToTop = () => {
           src="/images/logo.png"
           alt="Back to top"
           className="mt-[-30px] w-40 h-40"
+          width={512} height={512}
         />
       </div>
     )

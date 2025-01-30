@@ -94,7 +94,7 @@ const sections = [
           </div>
   
           <div className="hidden md:block absolute left-[900px] top-[10px] w-[400px] h-[300px]">
-            <Image src="/images/logo.png" alt="Tickets Example" className="w-full h-full object-contain" />
+            <Image src="/images/logo.png" alt="Tickets Example" className="w-full h-full object-contain" width={512} height={512} />
           </div>
         </div>
       </div>
@@ -141,6 +141,7 @@ const sections = [
                 src="/images/website_warchild_logo.png"
                 alt="Tickets Example"
                 className="w-full h-full object-contain"
+                width={198} height={198}
               />
             </div>
           </div>
@@ -181,6 +182,7 @@ const sections = [
             src="/images/website_merch.png"
             alt="Merch Example"
             className="w-full h-full object-contain"
+            width={530} height={454}
           />
         </div>
       </div>

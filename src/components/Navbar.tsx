@@ -96,7 +96,7 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#4fbafe] z-10" />
         <div className="flex items-center justify-between px-4 h-16 relative z-20">
           <a href="#" onClick={() => scrollToSection('home')}>
-            <Image src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" />
+            <Image src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" width={512} height={512}/>
           </a>
 
           <button
