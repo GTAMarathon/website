@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { scrollToSection } from '@/utils/scrollToSection';
 
 const BackToTop = () => {
@@ -26,7 +27,7 @@ const BackToTop = () => {
         onClick={() => scrollToSection('dates')}
       >
         <span>Back to top</span>
-        <img
+        <Image
           src="/images/logo.png"
           alt="Back to top"
           className="mt-[-30px] w-40 h-40"

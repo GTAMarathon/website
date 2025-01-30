@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Section from '@/components/Section';
 import BackToTop from '@/components/BackToTop';
@@ -93,7 +94,7 @@ const sections = [
           </div>
   
           <div className="hidden md:block absolute left-[900px] top-[10px] w-[400px] h-[300px]">
-            <img src="/images/logo.png" alt="Tickets Example" className="w-full h-full object-contain" />
+            <Image src="/images/logo.png" alt="Tickets Example" className="w-full h-full object-contain" />
           </div>
         </div>
       </div>
@@ -136,7 +137,7 @@ const sections = [
               </a>
             </div>
             <div className="ml-12 w-[15%] h-auto">
-              <img
+              <Image
                 src="/images/website_warchild_logo.png"
                 alt="Tickets Example"
                 className="w-full h-full object-contain"
@@ -176,7 +177,7 @@ const sections = [
           </a>
         </div>
         <div className="absolute left-[950px] top-[10px] w-[600px] h-[450px]">
-          <img
+          <Image
             src="/images/website_merch.png"
             alt="Merch Example"
             className="w-full h-full object-contain"

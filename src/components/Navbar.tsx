@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
+import Image from 'next/image';
 import { scrollToSection } from '@/utils/scrollToSection';
 
 interface NavbarProps {
@@ -11,22 +12,21 @@ interface NavbarProps {
 const Navbar = ({ links, logoSrc }: NavbarProps) => {
   const [activeId, setActiveId] = useState<string>(links[0]?.id || '');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCooldown, setIsCooldown] = useState(false); // Cooldown for navbar interaction
-  const lastScrollY = useRef(0); // Track last scroll position
-  const [scrollingManually, setScrollingManually] = useState(false); // Track manual scrolling
+  const [isCooldown, setIsCooldown] = useState(false);
+  const lastScrollY = useRef(0);
+  const [scrollingManually, setScrollingManually] = useState(false);
 
   useEffect(() => {
     const sections = links.map(link => document.getElementById(link.id)).filter(Boolean);
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (isCooldown || scrollingManually) return; // Skip if in cooldown or manual scrolling
+        if (isCooldown || scrollingManually) return;
 
         let activeSection: string | null = null;
         let maxVisibleArea = 0;
 
         entries.forEach(entry => {
-          // Calculate visible area of the section
           const rect = entry.target.getBoundingClientRect();
           const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
 
@@ -36,12 +36,11 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
           }
         });
 
-        // Update active section
         if (activeSection) {
           setActiveId(activeSection);
         }
       },
-      { threshold: [0, 0.5, 1] } // Track multiple threshold values
+      { threshold: [0, 0.5, 1] }
     );
 
     sections.forEach(section => {
@@ -49,52 +48,47 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
     });
 
     return () => observer.disconnect();
-  }, [links, isCooldown, scrollingManually]); // Depend on cooldown and manual scroll state
+  }, [links, isCooldown, scrollingManually]);
 
   const handleClick = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     setActiveId(id);
 
-    // Trigger cooldown to prevent section updates from the observer
     setIsCooldown(true);
     scrollToSection(id);
 
-    // Reset the cooldown after 2 seconds
     setTimeout(() => {
       setIsCooldown(false);
     }, 2000);
   };
 
-  const handleScroll = () => {
-    // Detect manual scroll
+  const handleScroll = useCallback(() => {
     if (Math.abs(window.scrollY - lastScrollY.current) > 5) {
       if (!scrollingManually) {
-        setScrollingManually(true); // Start manual scroll detection
+        setScrollingManually(true);
       }
-      setIsCooldown(false); // Reset cooldown during manual scrolling
+      setIsCooldown(false);
     }
 
     lastScrollY.current = window.scrollY;
-  };
+  }, [scrollingManually]);
 
-  // Handle scroll stop (after manual scroll has ended)
   useEffect(() => {
     if (scrollingManually) {
       const timeout = setTimeout(() => {
-        setScrollingManually(false); // Stop manual scrolling detection after a short delay
-      }, 150); // Set timeout for detecting scroll stop
+        setScrollingManually(false);
+      }, 150);
       return () => clearTimeout(timeout);
     }
   }, [scrollingManually]);
 
   useEffect(() => {
-    // Add scroll event listener to detect manual scrolling
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [scrollingManually]);
+  }, [scrollingManually, handleScroll]);
 
   return (
     <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
@@ -102,7 +96,7 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#4fbafe] z-10" />
         <div className="flex items-center justify-between px-4 h-16 relative z-20">
           <a href="#" onClick={() => scrollToSection('home')}>
-            <img src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" />
+            <Image src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" />
           </a>
 
           <button
