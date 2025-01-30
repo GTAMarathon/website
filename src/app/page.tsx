@@ -21,7 +21,7 @@ const sections = [
     bottom: { left: 25, right: 15 },
     content: (
       <h1 className="text-5xl text-white uppercase font-europagrotesk">
-        It's time to <span className="text-[#ffea00]">meet</span>.
+        It&apos;s time to <span className="text-[#ffea00]">meet</span>.
       </h1>
     ),
   },
@@ -76,7 +76,7 @@ const sections = [
           </h1>
   
           <p className="text-lg text-white mb-4 mt-5 font-centurygothic md:text-[20px]">
-            Whether you'd like to just pop in for a day, or stick around and have fun for the
+            Whether you&apos;d like to just pop in for a day, or stick around and have fun for the
             entire duration, we have ticket options that accommodate all! Browse and choose the
             one that suits your needs best!
           </p>
@@ -114,7 +114,7 @@ const sections = [
           </h1>
           <p className="text-lg text-white mb-8 font-centurygothic">
             Children every year are affected by war, and not only has this not gotten better recently, 
-            but as we know, it's gotten a lot, lot, worse. Every donation contributed to 
+            but as we know, it&apos;s gotten a lot, lot, worse. Every donation contributed to 
             <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span>2025</span> is directly forwarded to War Child, 
             a charitable organization that aims to protect and aid the most innocent, and by far most vulnerable victims of war; the children. 
             Help us in supporting their cause by donating to the marathon, or directly to them through 
@@ -207,7 +207,7 @@ const sections = [
           md:max-w-[70vw] max-md:w-full max-md:text-base"
         >
           Let a local offer you the best tips for travel, lodging, food, and everything in-between!
-          Avoid timeloss from Greggs to Tesco so that you don't miss your favorite runs back at the venue!
+          Avoid timeloss from Greggs to Tesco so that you don&apos;t miss your favorite runs back at the venue!
         </p>
         <div className="md:absolute md:left-[-550px] md:top-1/2 md:transform md:-translate-y-1/2 max-md:w-full">
           <a
@@ -232,11 +232,11 @@ const sections = [
     content: (
       <div className="relative bottom-[-350px] p-8 section-content px-4 flex flex-col items-center text-center">
         <h1 className="text-[50px] text-white font-bold uppercase max-md:text-3xl font-europagrotesk">
-          It's your time to shine
+          It&apos;s your time to shine
         </h1>
         <p className="text-[20px] text-white mt-8 mb-8 max-md:text-base font-centurygothic">
           If you want to contribute to the event, either from the comfort of your home, or in person at the Eldon Building, we await your submissions with open arms!
-          Submit your best and craziest ideas, let's make this one a truly special occasion!
+          Submit your best and craziest ideas, let&apos;s make this one a truly special occasion!
         </p>
         <div className="mt-12">
           <a
