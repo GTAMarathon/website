@@ -12,16 +12,16 @@ interface NavbarDesktopProps {
 const NavbarDesktop = ({ links, logoSrc }: NavbarDesktopProps) => {
   const [activeId, setActiveId] = useState<string>(links[0]?.id || '');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCooldown, setIsCooldown] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
   const lastScrollY = useRef(0);
-  const [scrollingManually, setScrollingManually] = useState(false);
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const sections = links.map(link => document.getElementById(link.id)).filter(Boolean);
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (isCooldown || scrollingManually) return;
+        if (isScrolling) return;
 
         let activeSection: string | null = null;
         let maxVisibleArea = 0;
@@ -40,7 +40,7 @@ const NavbarDesktop = ({ links, logoSrc }: NavbarDesktopProps) => {
           setActiveId(activeSection);
         }
       },
-      { threshold: [0, 0.5, 1] }
+      { threshold: [0.5] }
     );
 
     sections.forEach(section => {
@@ -48,47 +48,34 @@ const NavbarDesktop = ({ links, logoSrc }: NavbarDesktopProps) => {
     });
 
     return () => observer.disconnect();
-  }, [links, isCooldown, scrollingManually]);
+  }, [links, isScrolling]);
 
   const handleClick = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     setActiveId(id);
-
-    setIsCooldown(true);
     scrollToSection(id);
-
-    setTimeout(() => {
-      setIsCooldown(false);
-    }, 2000);
   };
 
   const handleScroll = useCallback(() => {
-    if (Math.abs(window.scrollY - lastScrollY.current) > 5) {
-      if (!scrollingManually) {
-        setScrollingManually(true);
-      }
-      setIsCooldown(false);
-    }
+    if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    
+    setIsScrolling(true);
+
+    scrollTimeout.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 200);
 
     lastScrollY.current = window.scrollY;
-  }, [scrollingManually]);
-
-  useEffect(() => {
-    if (scrollingManually) {
-      const timeout = setTimeout(() => {
-        setScrollingManually(false);
-      }, 150);
-      return () => clearTimeout(timeout);
-    }
-  }, [scrollingManually]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     };
-  }, [scrollingManually, handleScroll]);
+  }, [handleScroll]);
 
   return (
     <nav className="fixed top-0 w-full bg-white shadow-lg z-50">

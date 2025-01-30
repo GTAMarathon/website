@@ -23,7 +23,7 @@ const BackToTop = () => {
   return (
     showButton && (
       <div
-        className="mt-12 cursor-pointer text-lg text-white flex flex-col items-center justify-center font-europagrotesk"
+        className="mt-12 cursor-pointer text-lg text-white flex flex-col items-center justify-center font-bebasneue"
         onClick={() => scrollToSection('dates')}
       >
         <span>Back to top</span>

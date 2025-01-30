@@ -7,6 +7,7 @@ import SectionDesktop from '@/components/SectionDekstop';
 import SectionMobile from '@/components/SectionMobile';
 import BackToTop from '@/components/BackToTop';
 import Image from 'next/image';
+import { AutoTextSize } from 'auto-text-size'
 
 const links = [
   { id: 'dates', label: 'Dates' },
@@ -33,14 +34,16 @@ const sectionsMobile = [
   {
     id: 'dates',
     imageSrc: '/images/website_landing_eldon.png',
-    backgroundColor: '#4fbafe',
+    backgroundColor: '#12222c',
     top: { left: 25, right: 15 },
     bottom: { left: 65, right: 75 },
     content: (
       <div className="relative flex flex-col items-center xl:items-start xl:-translate-x-[100%]">
-        <h1 className="text-[150px] text-[#ffea00] xl:ml-[10vw] max-xl:text-[84px] text-center xl:text-left font-bebasneue">
-          April 7-11
-        </h1>
+        <AutoTextSize>
+          <h1 className="text-[#ffea00] xl:ml-[10vw] text-center xl:text-left font-bebasneue">
+            April 7-11
+          </h1>
+        </AutoTextSize>
         <div className="mt-[-25px] xl:ml-[10vw] max-xl:mt-4 text-center xl:text-left">
           <div
             className="xl:bg-gradient-to-r from-[#000000cc] to-transparent max-xl:bg-none inline-block py-1 px-2 font-centurygothic xl:text-[44px]"
@@ -74,7 +77,7 @@ const sectionsMobile = [
     top: { left: 65, right: 75 },
     bottom: { left: 75, right: 65 },
     content: (
-      <div className="relative p-8 xl:bottom-[-350px] xl:left-[-380px] bottom-[-215px] w-full section-content mobile-scale px-4 flex justify-center xl:block">
+      <div className="relative p-8 xl:bottom-[-300px] bottom-[-205px] w-full section-content mobile-scale px-4 flex justify-center xl:block">
         <div className="w-full max-w-screen-lg text-center xl:text-left">
           <h1 className="text-4xl xl:text-6xl text-white font-bold uppercase font-europagrotesk">
             Tickets available&nbsp;<span className="text-[#ffea00]">now</span>!
@@ -96,10 +99,6 @@ const sectionsMobile = [
               Get Your Tickets here!
             </a>
           </div>
-  
-          <div className="hidden xl:block absolute left-[900px] top-[10px] w-[400px] h-[300px]">
-            <Image src="/images/website_landing_ticket.png" alt="Tickets Example" className="w-[275%] h-[275%] object-contain" width={687} height={368} />
-          </div>
         </div>
       </div>
     ),
@@ -107,7 +106,7 @@ const sectionsMobile = [
   {
     id: 'charity',
     imageSrc: '/images/website_warchild_bg.png',
-    backgroundColor: '#4fbafe',
+    backgroundColor: '#12222c',
     backgroundOffset: "center 650px",
     top: { left: 75, right: 65 },
     bottom: { left: 80, right: 90 },
@@ -134,7 +133,7 @@ const sectionsMobile = [
                 href="https://www.warchild.org.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#ffea00] text-black py-3 px-6 text-xl inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk xl:text-[50px] font-black"
+                className="bg-[#ffea00] text-black py-3 px-6 text-xl inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[60px] font-black"
               >
                 Donate
               </a>
@@ -158,7 +157,7 @@ const sectionsMobile = [
     top: { left: 80, right: 80 },
     bottom: { left: 75, right: 65 },
     content: (
-      <div className="relative bottom-[-250px] left-[-400px] p-8 section-content mobile-scale px-4">
+      <div className="relative bottom-[-250px] p-8 section-content mobile-scale px-4">
         <h1 className="text-4xl text-[#4fbafe] font-bold mb-6 uppercase font-europagrotesk">
           Feel like repping the brand?
         </h1>
@@ -179,14 +178,6 @@ const sectionsMobile = [
           >
             Go to store
           </a>
-        </div>
-        <div className="absolute left-[950px] top-[10px] w-[600px] h-[450px]">
-          <Image
-            src="/images/website_merch.png"
-            alt="Merch Example"
-            className="w-full h-full object-contain"
-            width={530} height={454}
-          />
         </div>
       </div>
     ),
@@ -331,7 +322,7 @@ const sectionsDesktop = [
     top: { left: 0, right: 0 },
     bottom: { left: 25, right: 15 },
     content: (
-      <h1 className="text-5xl text-white uppercase font-europagrotesk">
+      <h1 className="text-5xl text-white uppercase font-europagrotesk mx-auto max-w-[50%] translate-x-[-50%] relative left-1/2">
         It&apos;s time to <span className="text-[#ffea00]">meet</span>.
       </h1>
     ),
@@ -339,24 +330,26 @@ const sectionsDesktop = [
   {
     id: 'dates',
     imageSrc: '/images/website_landing_eldon.png',
-    backgroundColor: '#4fbafe',
+    backgroundColor: '#12222c',
     top: { left: 25, right: 15 },
     bottom: { left: 65, right: 75 },
     content: (
-      <div className="relative flex flex-col items-center md:items-start md:-translate-x-[100%] bottom-[-50px]">
-        <h1 className="text-[150px] text-[#ffea00] md:ml-[10vw] max-md:text-[84px] text-center md:text-left font-bebasneue">
-          April 7-11
-        </h1>
-        <div className="mt-[-25px] md:ml-[10vw] max-md:mt-4 text-center md:text-left">
+      <div className="relative flex flex-col items-center xl:items-start bottom-[-50px]">
+        <AutoTextSize>
+          <h1 className="text-[150px] text-[#ffea00] xl:ml-[10vw] max-xl:text-[84px] text-center xl:text-left font-bebasneue">
+            April 7-11
+          </h1>
+        </AutoTextSize>
+        <div className="mt-[-25px] xl:ml-[10vw] max-xl:mt-4 text-center xl:text-left">
           <div
-            className="md:bg-gradient-to-r from-[#000000cc] to-transparent max-md:bg-none inline-block py-1 px-2 font-centurygothic md:text-[44px]"
+            className="xl:bg-gradient-to-r from-[#000000cc] to-transparent max-xl:bg-none inline-block py-1 px-2 font-centurygothic xl:text-[44px]"
             style={{ maxWidth: 'fit-content' }}
           >
-            <p className="text-4xl text-[#4fbafe] max-md:text-5xl">Eldon Building</p>
-            <p className="text-2xl text-white mt-1 max-md:text-2xl">University of Portsmouth</p>
+            <p className="text-4xl text-[#4fbafe] max-xl:text-5xl">Eldon Building</p>
+            <p className="text-2xl text-white mt-1 max-xl:text-2xl">University of Portsmouth</p>
           </div>
         </div>
-        <div className="mt-2 text-center md:text-left md:ml-[10vw]">
+        <div className="mt-2 text-center xl:text-left xl:ml-[10vw]">
           <a
             href="https://maps.app.goo.gl/ShWvsanb4n4XRynJ8"
             target="_blank"
@@ -381,28 +374,28 @@ const sectionsDesktop = [
     bottom: { left: 75, right: 65 },
     content: (
       <div className="relative p-8 lg:bottom-[-300px] lg:left-[-350px] bottom-[180px] w-full section-content mobile-scale px-4 flex justify-center lg:block">
-        <div className="w-full max-w-screen-lg text-center md:text-left">
-          <h1 className="text-6xl md:text-6xl text-white font-bold uppercase font-europagrotesk">
+        <div className="w-full max-w-screen-lg text-center xl:text-left">
+          <h1 className="text-6xl xl:text-6xl text-white font-bold uppercase font-europagrotesk">
             Tickets available&nbsp;<span className="text-[#ffea00]">now</span>!
           </h1>
 
-          <p className="text-[21px]/[28px] text-white mb-4 mt-9 font-centurygothic md:text-[21px]/[27px]">
+          <p className="text-[21px]/[28px] text-white mb-4 mt-9 font-centurygothic xl:text-[21px]/[27px]">
             Whether you&apos;d like to just pop in for a day, or stick around and have fun for the
             entire duration, we have ticket options that accommodate all! Browse and choose the
             one that suits your needs best!
           </p>
-          <div className="mt-[100px] max-md:mt-[70px]">
+          <div className="mt-[100px] max-xl:mt-[70px]">
             <a
               href="https://tickets.gtamarathon.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold md:text-[45px] text-[25px] inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk"
+              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold xl:text-[45px] text-[25px] inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk"
             >
               Get Your Tickets here!
             </a>
           </div>
 
-          <div className="hidden md:block absolute left-[975px] top-[-450px] w-[600px] h-[500px]">
+          <div className="hidden xl:block absolute left-[975px] top-[-450px] w-[600px] h-[500px]">
             <Image src="/images/website_landing_ticket.png" alt="Tickets Example" className="w-[275%] h-[275%] object-contain" width={687} height={368} />
           </div>
         </div>
@@ -412,7 +405,7 @@ const sectionsDesktop = [
   {
     id: 'charity',
     imageSrc: '/images/website_warchild_bg.png',
-    backgroundColor: '#4fbafe',
+    backgroundColor: '#12222c',
     backgroundOffset: "center 650px",
     top: { left: 75, right: 65 },
     bottom: { left: 80, right: 90 },
@@ -441,11 +434,11 @@ const sectionsDesktop = [
               href="https://www.warchild.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ffea00] text-black py-[3px] px-4 inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px] font-black max-md:text-6xl"
+              className="bg-[#ffea00] text-black py-[3px] px-4 inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px] font-black max-xl:text-6xl"
             >
               Donate
             </a>
-            <div className="ml-12 w-[15%] h-auto max-md:hidden">
+            <div className="ml-12 w-[15%] h-auto max-xl:hidden">
               <Image
                 src="/images/website_warchild_logo.png"
                 alt="War Child Logo"
@@ -467,10 +460,10 @@ const sectionsDesktop = [
     content: (
       <div className="relative left-[-350px] lg:bottom-[-370px] bottom-[-370px] p-8 section-content mobile-scale px-4">
         <div className="max-lg:text-center max-lg:w-full">
-          <h1 className="text-[30px] md:text-[48px] text-[#4fbafe] font-bold mb-6 uppercase font-europagrotesk">
+          <h1 className="text-[30px] xl:text-[48px] text-[#4fbafe] font-bold mb-6 uppercase font-europagrotesk">
             Feel like repping the brand?
           </h1>
-          <p className="text-[18px]/[23px] text-white mb-4 font-centurygothic md:text-[21px]/[27px]">
+          <p className="text-[18px]/[23px] text-white mb-4 font-centurygothic xl:text-[21px]/[27px]">
             If you like what we do, check out our wide selection of merchandise ranging from hoodies and T-shirts, all the way through mugs and deskmats!
             Every purchase directly supports us in staying afloat, and thus being able to bring you these productions year after year.
             Not to mention, according to our customers, they look stylish as hell!
@@ -511,24 +504,24 @@ const sectionsDesktop = [
           flex flex-col lg:items-end items-center 
           lg:text-right text-center w-full lg:w-[800px] max-w-none">
         <h1 className="text-[48px] text-black font-bold mb-6 uppercase font-europagrotesk 
-          md:max-w-[70vw] max-md:w-full max-md:text-3xl"
+          xl:max-w-[70vw] max-xl:w-full max-xl:text-3xl"
         >
           Read the official attendee guide
         </h1>
         <p className="text-[20px] text-black mb-4 font-centurygothic 
-          md:max-w-[70vw] max-md:w-full max-md:text-base w-[125%] md:text-[21px]/[27px]"
+          xl:max-w-[70vw] max-xl:w-full max-xl:text-base w-[125%] xl:text-[21px]/[27px]"
         >
           Let a local offer you the best tips for travel, lodging, food, and everything in-between!
           Avoid timeloss from Greggs to Tesco so that you don&apos;t miss your favorite runs back at the venue!
         </p>
-        <div className="md:absolute md:left-[-784px] md:top-1/2 md:transform md:-translate-y-1/2 max-md:w-full">
+        <div className="xl:absolute xl:left-[-784px] xl:top-1/2 xl:transform xl:-translate-y-1/2 max-xl:w-full">
           <a
             href="https://gist.github.com/Joshimuz/d6584ef380e04447639c27b909003e52"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#ffea00] text-black py-[3px] px-4 font-black inline-block 
             hover:bg-yellow-300 transition uppercase font-europagrotesk 
-            text-[45px] max-md:text-lg max-md:mt-4 max-md:w-full"
+            text-[45px] max-xl:text-lg max-xl:mt-4 max-xl:w-full"
           >
             Jump to guide
           </a>
@@ -543,10 +536,10 @@ const sectionsDesktop = [
     bottom: { left: 75, right: 65 },
     content: (
       <div className="relative lg:bottom-[-350px] bottom-[-350px] p-8 section-content px-4 flex flex-col items-center text-center">
-        <h1 className="text-[50px] text-white font-bold uppercase max-md:text-3xl font-europagrotesk">
+        <h1 className="text-[50px] text-white font-bold uppercase max-xl:text-3xl font-europagrotesk">
           It&apos;s your time to shine
         </h1>
-        <p className="text-[20px] text-white mt-5 mb-8 max-md:text-base font-centurygothic">
+        <p className="text-[20px] text-white mt-5 mb-8 max-xl:text-base font-centurygothic">
           If you want to contribute to the event, either from the comfort of your home, or in person at the Eldon Building, make sure to keep an eye on our socials for updates regarding submission dates!
         </p>
         <div className="mt-12">
@@ -554,7 +547,7 @@ const sectionsDesktop = [
             href=""
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-md:text-lg font-europagrotesk pointer-events-none"
+            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk pointer-events-none"
           >
             Coming soon
           </a>
@@ -651,7 +644,7 @@ export default function Home() {
   
   return (
     <div className="overflow-x-hidden">
-      {width > 1152 ? (
+      {width > 1752 ? (
         <>
           <NavbarDesktop links={links} logoSrc="/images/logo.png" />
           {sectionsDesktop.map((section) => (
