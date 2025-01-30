@@ -70,7 +70,7 @@ const sections = [
     top: { left: 65, right: 75 },
     bottom: { left: 75, right: 65 },
     content: (
-      <div className="relative p-8 lg:bottom-[-300px] lg:left-[-350px] bottom-[-280px] w-full section-content mobile-scale px-4 flex justify-center lg:block">
+      <div className="relative p-8 lg:bottom-[-300px] lg:left-[-350px] bottom-[180px] w-full section-content mobile-scale px-4 flex justify-center lg:block">
         <div className="w-full max-w-screen-lg text-center md:text-left">
           <h1 className="text-6xl md:text-6xl text-white font-bold uppercase font-europagrotesk">
             Tickets available&nbsp;<span className="text-[#ffea00]">now</span>!
@@ -107,13 +107,13 @@ const sections = [
     top: { left: 75, right: 65 },
     bottom: { left: 80, right: 90 },
     content: (
-      <div className="relative bottom-[-300px] lg:right-[-275px] p-8 section-content mobile-scale px-4">
-        <div className="w-[110%] max-w-screen-lg lg:text-right px-4">
+      <div className="relative bottom-[-300px] flex justify-center items-center p-8 section-content mobile-scale px-4 left-[350px]">
+        <div className="w-full max-w-screen-lg px-4 text-left lg:text-right">
           <h1 className="text-[90px] text-white font-bold mb-12 uppercase font-bebasneue max-lg:text-6xl tracking-wide">
             Aiding the less fortunate
           </h1>
-          <p className="text-[21px]/[27px] text-white mb-8 font-centurygothic">
-            Children every year are affected by war, and this situation is far from improving.<br /> As such, every donation contributed to 
+          <p className="text-[21px]/[27px] text-white mb-8 mt-[-20px] font-centurygothic">
+            Children every year are affected by war, and this situation is far from improving.<br /> As such, every donation contributed to
             <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span> 2025</span> is directly forwarded to War Child, 
             a charitable organization that aims to protect and aid the most innocent, and by far most vulnerable victims of war; the children. 
             Help us in supporting their cause by donating to the marathon, or directly to them through&nbsp;
@@ -126,21 +126,19 @@ const sections = [
               their website
             </a>.
           </p>
-          <div className="flex items-center justify-end lg:justify-end max-md:justify-center mt-12 mb-4">
-            <div className="max-md:w-full max-md:text-center">
-              <a
-                href="https://www.warchild.org.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#ffea00] text-black py-[3px] px-4 inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px] font-black max-md:text-xl"
-              >
-                Donate
-              </a>
-            </div>
+          <div className="flex items-center justify-center lg:justify-end mt-12 mb-4">
+            <a
+              href="https://www.warchild.org.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#ffea00] text-black py-[3px] px-4 inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px] font-black max-md:text-6xl"
+            >
+              Donate
+            </a>
             <div className="ml-12 w-[15%] h-auto max-md:hidden">
               <Image
                 src="/images/website_warchild_logo.png"
-                alt="Tickets Example"
+                alt="War Child Logo"
                 className="w-full h-full object-contain"
                 width={198} height={198}
               />
@@ -149,7 +147,8 @@ const sections = [
         </div>
       </div>
     ),
-  },
+  }
+  ,
   {
     id: 'merch',
     backgroundColor: '#12222c',
@@ -158,12 +157,12 @@ const sections = [
     content: (
       <div className="relative left-[-350px] lg:bottom-[-370px] bottom-[-370px] p-8 section-content mobile-scale px-4">
         <div className="max-lg:text-center max-lg:w-full">
-          <h1 className="text-[48px] text-[#4fbafe] font-bold mb-6 uppercase font-europagrotesk">
+          <h1 className="text-[30px] md:text-[48px] text-[#4fbafe] font-bold mb-6 uppercase font-europagrotesk">
             Feel like repping the brand?
           </h1>
-          <p className="text-lg text-white mb-4 font-centurygothic md:text-[21px]/[27px]">
-8px]/[23px] text-white mb-4 font-centurygothic md:text-[21px]/[27px]">
-  Every purchase directly supports us in staying afloat, and thus being able to bring you these productions year after year.
+          <p className="text-[18px]/[23px] text-white mb-4 font-centurygothic md:text-[21px]/[27px]">
+            If you like what we do, check out our wide selection of merchandise ranging from hoodies and T-shirts, all the way through mugs and deskmats!
+            Every purchase directly supports us in staying afloat, and thus being able to bring you these productions year after year.
             Not to mention, according to our customers, they look stylish as hell!
             <br /> <br />
             Browse our all-year-round selection, or wait a little for the seasonal arrivals coming soon!
