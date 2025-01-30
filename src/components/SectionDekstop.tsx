@@ -17,8 +17,7 @@ interface SectionProps {
   backgroundScale?: number;
 }
 
-const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset, backgroundScale = 1 }) => {
-  
+const SectionDesktop: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset, backgroundScale = 1 }) => {
   const sectionHeight = Math.max(top.left + bottom.left, top.right + bottom.right);
   const overlap = Math.max(top.left, top.right);
   const toPercent = (value: number) => (value / sectionHeight) * 100;
@@ -65,4 +64,4 @@ const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, childr
   );
 };
 
-export default Section;
+export default SectionDesktop;

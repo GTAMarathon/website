@@ -102,7 +102,7 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
 
           {/* Hamburger button for mobile */}
           <button
-            className="md:hidden p-2"
+            className="xl:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,13 +111,13 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex h-full">
+          <div className="hidden xl:flex h-full">
             {links.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={handleClick(link.id)}
-                className={`relative px-6 h-full font-bebasneue items-center text-[30px] transition-colors hidden md:flex ${activeId === link.id ? 'bg-[#4fbafe]' : ''}`}
+                className={`relative px-6 h-full font-bebasneue items-center text-[30px] transition-colors hidden xl:flex ${activeId === link.id ? 'bg-[#4fbafe]' : ''}`}
               >
                 {link.label}
               </a>
@@ -127,7 +127,7 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-white xl:hidden">
             {links.map((link) => (
               <a
                 key={link.id}

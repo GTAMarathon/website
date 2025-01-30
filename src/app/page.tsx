@@ -1,7 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import Section from '@/components/Section';
+import SectionDesktop from '@/components/SectionDekstop';
 import BackToTop from '@/components/BackToTop';
 
 const links = [
@@ -63,7 +65,7 @@ const sections = [
         </div>
       </div>
     ),
-  },  
+  },
   {
     id: 'tickets',
     backgroundColor: '#12222c',
@@ -75,7 +77,7 @@ const sections = [
           <h1 className="text-6xl md:text-6xl text-white font-bold uppercase font-europagrotesk">
             Tickets available&nbsp;<span className="text-[#ffea00]">now</span>!
           </h1>
-  
+
           <p className="text-[21px]/[28px] text-white mb-4 mt-9 font-centurygothic md:text-[21px]/[27px]">
             Whether you&apos;d like to just pop in for a day, or stick around and have fun for the
             entire duration, we have ticket options that accommodate all! Browse and choose the
@@ -91,14 +93,14 @@ const sections = [
               Get Your Tickets here!
             </a>
           </div>
-  
+
           <div className="hidden md:block absolute left-[975px] top-[-450px] w-[600px] h-[500px]">
             <Image src="/images/website_landing_ticket.png" alt="Tickets Example" className="w-[275%] h-[275%] object-contain" width={687} height={368} />
           </div>
         </div>
       </div>
     ),
-  },  
+  },
   {
     id: 'charity',
     imageSrc: '/images/website_warchild_bg.png',
@@ -114,10 +116,10 @@ const sections = [
           </h1>
           <p className="text-[21px]/[27px] text-white mb-8 mt-[-20px] font-centurygothic">
             Children every year are affected by war, and this situation is far from improving.<br /> As such, every donation contributed to
-            <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span> 2025</span> is directly forwarded to War Child, 
-            a charitable organization that aims to protect and aid the most innocent, and by far most vulnerable victims of war; the children. 
+            <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span> 2025</span> is directly forwarded to War Child,
+            a charitable organization that aims to protect and aid the most innocent, and by far most vulnerable victims of war; the children.
             Help us in supporting their cause by donating to the marathon, or directly to them through&nbsp;
-            <a 
+            <a
               href="https://www.warchild.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
@@ -323,17 +325,35 @@ const sections = [
         </div>
       </div>
     ),
-  },  
+  },
 ];
 
 export default function Home() {
+  const [width, setWidth] = useState(0);
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    handleWindowResize();
+    window.addEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [])
+  
   return (
     <div className="overflow-x-hidden">
       <Navbar links={links} logoSrc="/images/logo.png" />
       {sections.map((section) => (
-        <Section key={section.id} {...section}>
-          {section.content}
-        </Section>
+        <>
+          {width > 1152 ?
+            <SectionDesktop key={section.id} {...section}>
+              {section.content}
+            </SectionDesktop>
+            : <div key={section.id}>mobile site goes here</div>}
+
+        </>
+
       ))}
     </div>
   );
