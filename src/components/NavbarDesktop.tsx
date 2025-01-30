@@ -4,12 +4,12 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { scrollToSection } from '@/utils/scrollToSection';
 
-interface NavbarProps {
+interface NavbarDesktopProps {
   links: { id: string; label: string }[];
   logoSrc: string;
 }
 
-const Navbar = ({ links, logoSrc }: NavbarProps) => {
+const NavbarDesktop = ({ links, logoSrc }: NavbarDesktopProps) => {
   const [activeId, setActiveId] = useState<string>(links[0]?.id || '');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCooldown, setIsCooldown] = useState(false);
@@ -99,8 +99,6 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
           <a href="#" onClick={() => scrollToSection('home')} className={`${isMobileMenuOpen ? 'mx-auto' : ''}`}>
             <Image src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" width={512} height={512} />
           </a>
-
-          {/* Hamburger button for mobile */}
           <button
             className="xl:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -109,8 +107,6 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-
-          {/* Desktop menu */}
           <div className="hidden xl:flex h-full">
             {links.map((link) => (
               <a
@@ -124,8 +120,6 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
             ))}
           </div>
         </div>
-
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white xl:hidden">
             {links.map((link) => (
@@ -145,4 +139,4 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
   );
 };
 
-export default Navbar;
+export default NavbarDesktop;

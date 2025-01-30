@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SectionProps {
+interface SectionMobileProps {
   id: string;
   backgroundColor: string;
   imageSrc?: string;
@@ -14,10 +14,10 @@ interface SectionProps {
     right: number;
   };
   backgroundOffset?: string;
-  backgroundScale?: number;
 }
 
-const SectionDesktop: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset }) => {
+const SectionMobile: React.FC<SectionMobileProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset }) => {
+  
   const sectionHeight = Math.max(top.left + bottom.left, top.right + bottom.right);
   const overlap = Math.max(top.left, top.right);
   const toPercent = (value: number) => (value / sectionHeight) * 100;
@@ -34,7 +34,7 @@ const SectionDesktop: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor,
       }}
     >
       <div 
-        className="relative h-full flex items-center justify-center responsive-bg no-trapezoid"
+        className="relative h-full flex items-center justify-center responsive-bg"
         style={{
           backgroundColor: backgroundColor,
           backgroundImage: `url(${imageSrc})`,
@@ -64,4 +64,4 @@ const SectionDesktop: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor,
   );
 };
 
-export default SectionDesktop;
+export default SectionMobile;
