@@ -41,6 +41,27 @@ body {
 @media (max-width: 900px)  { html { font-size: 80%; } }
 @media (max-width: 600px)  { html { font-size: 70%; } }
 
+@media (max-width: 1200px) { 
+  .responsive-bg { 
+    background-size: 120%; 
+    background-position: center center; 
+  } 
+}
+
+@media (max-width: 900px) { 
+  .responsive-bg { 
+    background-size: 140%; 
+    background-position: center center; 
+  } 
+}
+
+@media (max-width: 600px) { 
+  .responsive-bg { 
+    background-size: 160%; 
+    background-position: center center; 
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -75,7 +96,7 @@ section {
 
 @font-face {
   font-family: 'CenturyGothic';
-  src: url('/fonts/centurygothic.ttf') format('truetype');
+  src: url('/fonts/CENTURY_GOTHIC.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -92,4 +113,34 @@ section {
   src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+#dates .responsive-bg {
+  background-size: 100% auto !important;
+  background-position: center !important;
+}
+
+#charity .responsive-bg {
+  background-size: 100% auto !important;
+  background-position: "center 650px" !important;
+}
+
+@media (max-width: 768px) {
+  #dates .responsive-bg {
+    background-size: 400% auto !important;
+    background-position: 80% center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #charity .responsive-bg {
+    background-size: 755% auto !important;
+    background-position: 80% center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .no-trapezoid {
+    clip-path: none !important;
+  }
 }

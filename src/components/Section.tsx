@@ -14,9 +14,11 @@ interface SectionProps {
     right: number;
   };
   backgroundOffset?: string;
+  backgroundScale?: number;
 }
 
-const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset }) => {
+const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset, backgroundScale = 1 }) => {
+  
   const sectionHeight = Math.max(top.left + bottom.left, top.right + bottom.right);
   const overlap = Math.max(top.left, top.right);
   const toPercent = (value: number) => (value / sectionHeight) * 100;
@@ -33,11 +35,10 @@ const Section: React.FC<SectionProps> = ({ id, imageSrc, backgroundColor, childr
       }}
     >
       <div 
-        className="relative h-full flex items-center justify-center"
+        className="relative h-full flex items-center justify-center responsive-bg no-trapezoid"
         style={{
           backgroundColor: backgroundColor,
           backgroundImage: `url(${imageSrc})`,
-          backgroundSize: "cover",
           backgroundPosition: backgroundOffset || "center",
           backgroundRepeat: "no-repeat",
           clipPath: `polygon(

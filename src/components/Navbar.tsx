@@ -94,11 +94,13 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
     <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
       <div className="relative">
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#4fbafe] z-10" />
-        <div className="flex items-center justify-between px-4 h-16 relative z-20">
-          <a href="#" onClick={() => scrollToSection('home')}>
-            <Image src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" width={512} height={512}/>
+        <div className={`flex items-center justify-between px-4 h-16 relative z-20 ${isMobileMenuOpen ? 'justify-center' : ''}`}>
+          {/* Logo */}
+          <a href="#" onClick={() => scrollToSection('home')} className={`${isMobileMenuOpen ? 'mx-auto' : ''}`}>
+            <Image src={logoSrc} alt="Logo" className="h-[100px] w-auto cursor-pointer" width={512} height={512} />
           </a>
 
+          {/* Hamburger button for mobile */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -108,6 +110,7 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
             </svg>
           </button>
 
+          {/* Desktop menu */}
           <div className="hidden md:flex h-full">
             {links.map((link) => (
               <a
@@ -121,6 +124,8 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
             ))}
           </div>
         </div>
+
+        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white md:hidden">
             {links.map((link) => (
@@ -128,7 +133,7 @@ const Navbar = ({ links, logoSrc }: NavbarProps) => {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={handleClick(link.id)}
-                className={`block px-6 py-3 text-sm ${activeId === link.id ? 'bg-[#4fbafe]' : ''}`}
+                className={`block px-6 py-3 text-sm font-bebasneue ${activeId === link.id ? 'bg-[#4fbafe]' : ''}`}
               >
                 {link.label}
               </a>
