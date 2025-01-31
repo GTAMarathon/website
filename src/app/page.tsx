@@ -38,32 +38,23 @@ const sectionsMobile = [
     top: { left: 25, right: 15 },
     bottom: { left: 65, right: 75 },
     content: (
-      <div className="relative flex flex-col items-center xl:items-start xl:-translate-x-[100%]">
+      <div className="relative flex flex-col items-center text-center bottom-[-50px]">
         <AutoTextSize>
-          <h1 className="text-[#ffea00] xl:ml-[10vw] text-center xl:text-left font-bebasneue">
+          <h1 className="text-[150px] text-[#ffea00] max-xl:text-[84px] font-bebasneue">
             April 7-11
           </h1>
         </AutoTextSize>
-        <div className="mt-[-25px] xl:ml-[10vw] max-xl:mt-4 text-center xl:text-left">
-          <div
-            className="xl:bg-gradient-to-r from-[#000000cc] to-transparent max-xl:bg-none inline-block py-1 px-2 font-centurygothic xl:text-[44px]"
-            style={{ maxWidth: 'fit-content' }}
-          >
-          <p className="text-4xl text-[#4fbafe] max-xl:text-5xl">Eldon Building</p>
-          <p className="text-2xl text-white mt-1 max-xl:text-2xl">University of Portsmouth</p>
+        <div className="mt-[-25px] max-xl:mt-4 flex flex-col items-center w-full">
+          <div className="inline-block py-1 px-2 font-centurygothic xl:text-[44px] w-full">
+            <p className="text-4xl text-[#4fbafe] max-xl:text-5xl">Eldon Building</p>
+            <p className="text-2xl text-white mt-1 max-xl:text-2xl">University of Portsmouth</p>
           </div>
         </div>
-        <div className="mt-2 text-center xl:text-left xl:ml-[10vw]">
+        <div className="mt-2 w-full flex justify-center">
           <a
             href="https://maps.app.goo.gl/ShWvsanb4n4XRynJ8"
             target="_blank"
             className="font-black text-xl underline inline-block text-[#4fbafe] hover:text-white font-europagrotesk uppercase"
-            style={{
-              position: 'relative',
-              zIndex: 9999,
-              background: 'transparent',
-              padding: '1px 1px',
-            }}
           >
             Click for Directions
           </a>
@@ -322,7 +313,7 @@ const sectionsDesktop = [
     top: { left: 0, right: 0 },
     bottom: { left: 25, right: 15 },
     content: (
-      <h1 className="text-5xl text-white uppercase font-europagrotesk mx-auto max-w-[50%] translate-x-[-50%] relative left-1/2">
+      <h1 className="text-5xl text-white uppercase font-europagrotesk mx-auto max-w-[100%] translate-x-[-50%] relative left-1/2">
         It&apos;s time to <span className="text-[#ffea00]">meet</span>.
       </h1>
     ),
@@ -334,32 +325,23 @@ const sectionsDesktop = [
     top: { left: 25, right: 15 },
     bottom: { left: 65, right: 75 },
     content: (
-      <div className="relative flex flex-col items-center xl:items-start bottom-[-50px]">
+      <div className="relative flex flex-col items-center text-center bottom-[-50px]">
         <AutoTextSize>
-          <h1 className="text-[150px] text-[#ffea00] xl:ml-[10vw] max-xl:text-[84px] text-center xl:text-left font-bebasneue">
+          <h1 className="text-[150px] text-[#ffea00] max-xl:text-[84px] font-bebasneue">
             April 7-11
           </h1>
         </AutoTextSize>
-        <div className="mt-[-25px] xl:ml-[10vw] max-xl:mt-4 text-center xl:text-left">
-          <div
-            className="xl:bg-gradient-to-r from-[#000000cc] to-transparent max-xl:bg-none inline-block py-1 px-2 font-centurygothic xl:text-[44px]"
-            style={{ maxWidth: 'fit-content' }}
-          >
+        <div className="mt-[-25px] max-xl:mt-4 flex flex-col items-center w-full">
+          <div className="inline-block py-1 px-2 font-centurygothic xl:text-[44px] w-full">
             <p className="text-4xl text-[#4fbafe] max-xl:text-5xl">Eldon Building</p>
             <p className="text-2xl text-white mt-1 max-xl:text-2xl">University of Portsmouth</p>
           </div>
         </div>
-        <div className="mt-2 text-center xl:text-left xl:ml-[10vw]">
+        <div className="mt-2 w-full flex justify-center">
           <a
             href="https://maps.app.goo.gl/ShWvsanb4n4XRynJ8"
             target="_blank"
             className="font-black text-xl underline inline-block text-[#4fbafe] hover:text-white font-europagrotesk uppercase"
-            style={{
-              position: 'relative',
-              zIndex: 9999,
-              background: 'transparent',
-              padding: '1px 1px',
-            }}
           >
             Click for Directions
           </a>
@@ -412,7 +394,7 @@ const sectionsDesktop = [
     content: (
       <div className="relative bottom-[-300px] flex justify-center items-center p-8 section-content mobile-scale px-4 left-[350px]">
         <div className="w-full max-w-screen-lg px-4 text-left lg:text-right">
-          <h1 className="text-[90px] text-white font-bold mb-12 uppercase font-bebasneue max-lg:text-6xl tracking-wide">
+        <h1 className="text-[min(90px,8vw)] text-white font-bold mb-12 uppercase font-bebasneue tracking-wide whitespace-nowrap w-full">
             Aiding the less fortunate
           </h1>
           <p className="text-[21px]/[27px] text-white mb-8 mt-[-20px] font-centurygothic">
@@ -450,8 +432,7 @@ const sectionsDesktop = [
         </div>
       </div>
     ),
-  }
-  ,
+  },
   {
     id: 'merch',
     backgroundColor: '#12222c',
