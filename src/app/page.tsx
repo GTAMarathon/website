@@ -162,7 +162,7 @@ const sectionsMobile = [
 
         <div className="mt-8">
           <a
-            href="https://merch.gtamarathon.com/"
+            href="https://gtamarathon-shop.fourthwall.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#ffea00] text-black py-3 px-6 font-bold text-xl inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[40px]"
@@ -453,7 +453,7 @@ const sectionsDesktop = [
           </p>
           <div className="mt-[100px]">
             <a
-              href="https://merch.gtamarathon.com/"
+              href="https://gtamarathon-shop.fourthwall.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#ffea00] text-black py-[3px] px-4 font-bold inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px]"
