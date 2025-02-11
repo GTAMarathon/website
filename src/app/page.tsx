@@ -521,16 +521,16 @@ const sectionsDesktop = [
           It&apos;s your time to shine
         </h1>
         <p className="text-[20px] text-white mt-5 mb-8 max-xl:text-base font-centurygothic">
-          If you want to contribute to the event, either from the comfort of your home, or in person at the Eldon Building, make sure to keep an eye on our socials for updates regarding submission dates!
+          If you want to contribute to the event, either from the comfort of your home, or in person at the Eldon Building, we await your submissions with open arms! Submit your best and craziest ideas, let's make this one a truly special occasion!
         </p>
         <div className="mt-12">
           <a
-            href=""
+            href="https://oengus.io/marathon/gtam2025"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk pointer-events-none"
+            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk"
           >
-            Coming soon
+            Submit
           </a>
         </div>
       </div>
