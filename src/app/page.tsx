@@ -15,7 +15,7 @@ const links = [
   { id: 'charity', label: 'Charity' },
   { id: 'merch', label: 'Merch' },
   { id: 'guide', label: 'Attendee Guide' },
-  { id: 'runs', label: 'Submissions' },
+  { id: 'runs', label: 'Schedule' },
   { id: 'contact', label: 'Stay in Touch' },
 ];
 
@@ -157,7 +157,7 @@ const sectionsMobile = [
           Every purchase directly supports us in staying afloat, and thus being able to bring you these productions year after year.
           Not to mention, according to our customers, they look stylish as hell!
           <br /> <br />
-          Browse our all-year-round selection, or wait a little for the seasonal arrivals coming soon!
+          Browse our all-year-round selection, or check out our seasonal exclusives now!
         </p>
 
         <div className="mt-8">
@@ -214,19 +214,19 @@ const sectionsMobile = [
     content: (
       <div className="relative bottom-[-210px] p-8 section-content px-4 flex flex-col items-center text-center">
         <h1 className="text-4xl text-white font-bold uppercase font-europagrotesk">
-          It&apos;s your time to shine
+          SCHEDULE
         </h1>
         <p className="xl:text-[24x]/[27px] text-white mt-8 mb-8 font-centurygothic">
-        If you want to contribute to the event, either from the comfort of your home, or in person at the Eldon Building, we await your submissions with open arms! Submit your best and craziest ideas, let&apos;s make this one a truly special occasion!
+        Stay tuned for more information!
         </p>
         <div className="mt-12">
           <a
-            href="https://oengus.io/marathon/gtam2025"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk"
+            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk pointer-events-none"
           >
-            Submit
+            Coming soon
           </a>
         </div>
       </div>
@@ -449,7 +449,7 @@ const sectionsDesktop = [
             Every purchase directly supports us in staying afloat, and thus being able to bring you these productions year after year.
             Not to mention, according to our customers, they look stylish as hell!
             <br /> <br />
-            Browse our all-year-round selection, or wait a little for the seasonal arrivals coming soon!
+            Browse our all-year-round selection, or check out our seasonal exclusives now!
           </p>
           <div className="mt-[100px]">
             <a
@@ -518,19 +518,19 @@ const sectionsDesktop = [
     content: (
       <div className="relative lg:bottom-[-350px] bottom-[-350px] p-8 section-content px-4 flex flex-col items-center text-center">
         <h1 className="text-[50px] text-white font-bold uppercase max-xl:text-3xl font-europagrotesk">
-          It&apos;s your time to shine
+          SCHEDULE
         </h1>
         <p className="text-[20px] text-white mt-5 mb-8 max-xl:text-base font-centurygothic">
-        If you want to contribute to the event, either from the comfort of your home, or in person at the Eldon Building, we await your submissions with open arms! Submit your best and craziest ideas, let&apos;s make this one a truly special occasion!
+        Stay tuned for more information!
         </p>
         <div className="mt-12">
           <a
-            href="https://oengus.io/marathon/gtam2025"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk"
+            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk pointer-events-none"
           >
-            Submit
+            Coming soon
           </a>
         </div>
       </div>
