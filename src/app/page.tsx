@@ -217,16 +217,16 @@ const sectionsMobile = [
           SCHEDULE
         </h1>
         <p className="xl:text-[24x]/[27px] text-white mt-8 mb-8 font-centurygothic">
-        Stay tuned for more information!
+        The long awaited list is here. Click to see the official schedule for the first ever in-person iteration of <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span></span>! Times are subject to change, so check back here occasionally to stay up to date with the runs on show!
         </p>
         <div className="mt-12">
           <a
-            href=""
+            href="https://oengus.io/marathon/gtam2025/schedule/main"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-bloc uppercase max-xl:text-lg font-europagrotesk pointer-events-none transition duration-300 ease-in-out hover:bg-white hover:scale-110"
+            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
-            Coming soon
+            go to schedule
           </a>
         </div>
       </div>
@@ -520,16 +520,16 @@ const sectionsDesktop = [
           SCHEDULE
         </h1>
         <p className="text-[20px] text-white mt-5 mb-8 max-xl:text-base font-centurygothic">
-        Stay tuned for more information!
+        The long awaited list is here. Click to see the official schedule for the first ever in-person iteration of <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span></span>! Times are subject to change, so check back here occasionally to stay up to date with the runs on show!
         </p>
         <div className="mt-12">
           <a
-            href=""
+            href="https://oengus.io/marathon/gtam2025/schedule/main"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-bloc uppercase max-xl:text-lg font-europagrotesk pointer-events-none transition duration-300 ease-in-out hover:bg-white hover:scale-110"
+            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
-            Coming soon
+            go to schedule
           </a>
         </div>
       </div>
