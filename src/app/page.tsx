@@ -221,7 +221,7 @@ const sectionsMobile = [
         </p>
         <div className="mt-12">
           <a
-            href="https://oengus.io/marathon/gtam2025/schedule/main"
+            href="https://oengus.fun/gtam2025/gtam2025"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
@@ -524,7 +524,7 @@ const sectionsDesktop = [
         </p>
         <div className="mt-12">
           <a
-            href="https://oengus.io/marathon/gtam2025/schedule/main"
+            href="https://oengus.fun/gtam2025/gtam2025"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
