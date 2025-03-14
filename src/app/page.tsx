@@ -85,7 +85,7 @@ const sectionsMobile = [
               href="https://tickets.gtamarathon.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold xl:text-[40px] text-[20px] inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk"
+              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold xl:text-[40px] text-[20px] inline-block uppercase font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
             >
               Get Your Tickets here!
             </a>
@@ -124,7 +124,7 @@ const sectionsMobile = [
                 href="https://www.warchild.org.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#ffea00] text-black py-3 px-6 text-xl inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[60px] font-black"
+                className="bg-[#ffea00] text-black py-3 px-6 text-xl inline-block uppercase font-europagrotesk text-[60px] font-black transition duration-300 ease-in-out hover:bg-white hover:scale-110"
               >
                 Donate
               </a>
@@ -165,7 +165,7 @@ const sectionsMobile = [
             href="https://gtamarathon-shop.fourthwall.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-xl inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[40px]"
+            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-xl inline-block uppercase font-europagrotesk text-[40px] transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
             Go to store
           </a>
@@ -198,7 +198,7 @@ const sectionsMobile = [
             href="https://gist.github.com/Joshimuz/d6584ef380e04447639c27b909003e52"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-xl inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[40px]"
+            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-xl inline-block uppercase font-europagrotesk text-[40px] transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
             Jump to guide
           </a>
@@ -217,16 +217,16 @@ const sectionsMobile = [
           SCHEDULE
         </h1>
         <p className="xl:text-[24x]/[27px] text-white mt-8 mb-8 font-centurygothic">
-        Stay tuned for more information!
+        The long awaited list is here. Click to see the official schedule for the first ever in-person iteration of <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span></span>! Times are subject to change, so check back here occasionally to stay up to date with the runs on show!
         </p>
         <div className="mt-12">
           <a
-            href=""
+            href="https://oengus.fun/gtam2025/gtam2025"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk pointer-events-none"
+            className="bg-[#ffea00] text-black py-3 px-6 font-bold text-[40px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
-            Coming soon
+            go to schedule
           </a>
         </div>
       </div>
@@ -371,7 +371,7 @@ const sectionsDesktop = [
               href="https://tickets.gtamarathon.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold xl:text-[45px] text-[25px] inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk"
+              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold xl:text-[45px] text-[25px] inline-bloc uppercase font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
             >
               Get Your Tickets here!
             </a>
@@ -416,7 +416,7 @@ const sectionsDesktop = [
               href="https://www.warchild.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ffea00] text-black py-[3px] px-4 inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px] font-black max-xl:text-6xl"
+              className="bg-[#ffea00] text-black py-[3px] px-4 inline-block uppercase font-europagrotesk text-[45px] font-black max-xl:text-6xl transition duration-300 ease-in-out hover:bg-white hover:scale-110"
             >
               Donate
             </a>
@@ -456,7 +456,7 @@ const sectionsDesktop = [
               href="https://gtamarathon-shop.fourthwall.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold inline-block hover:bg-yellow-300 transition uppercase font-europagrotesk text-[45px]"
+              className="bg-[#ffea00] text-black py-[3px] px-4 font-bold inline-block uppercase font-europagrotesk text-[45px] transition duration-300 ease-in-out hover:bg-white hover:scale-110"
             >
               Go to store
             </a>
@@ -500,9 +500,8 @@ const sectionsDesktop = [
             href="https://gist.github.com/Joshimuz/d6584ef380e04447639c27b909003e52"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-[3px] px-4 font-black inline-block 
-            hover:bg-yellow-300 transition uppercase font-europagrotesk 
-            text-[45px] max-xl:text-lg max-xl:mt-4 max-xl:w-full"
+            className="bg-[#ffea00] text-black py-[3px] px-4 font-black inline-block uppercase font-europagrotesk 
+            text-[45px] max-xl:text-lg max-xl:mt-4 max-xl:w-full transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
             Jump to guide
           </a>
@@ -521,16 +520,16 @@ const sectionsDesktop = [
           SCHEDULE
         </h1>
         <p className="text-[20px] text-white mt-5 mb-8 max-xl:text-base font-centurygothic">
-        Stay tuned for more information!
+        The long awaited list is here. Click to see the official schedule for the first ever in-person iteration of <span className="font-slopeopera"> GTA<span className="font-slopeopera text-[#4fbafe]">M</span></span>! Times are subject to change, so check back here occasionally to stay up to date with the runs on show!
         </p>
         <div className="mt-12">
           <a
-            href=""
+            href="https://oengus.fun/gtam2025/gtam2025"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block hover:bg-yellow-300 transition uppercase max-xl:text-lg font-europagrotesk pointer-events-none"
+            className="bg-[#ffea00] text-black py-[3px] px-4 font-bold text-[45px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
-            Coming soon
+            go to schedule
           </a>
         </div>
       </div>
