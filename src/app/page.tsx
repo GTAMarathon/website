@@ -27,7 +27,7 @@ const sectionsMobile = [
     bottom: { left: 25, right: 15 },
     content: (
       <h1 className="text-5xl text-white uppercase font-europagrotesk">
-        It&apos;s time to <span className="text-gtam-yellow">meet</span>.
+        We are <span className="text-gtam-yellow">back</span>.
       </h1>
     ),
   },
@@ -97,7 +97,7 @@ const sectionsMobile = [
   },  
   {
     id: 'charity',
-    imageSrc: '/images/website_warchild_bg.png', //TODO New Background Image
+    imageSrc: '/images/website_redcross_bg.png',
     backgroundColor: '#12222c',
     backgroundOffset: "center 650px",
     top: { left: 75, right: 65 },
@@ -119,8 +119,28 @@ const sectionsMobile = [
             rel="noopener noreferrer"
             className='underline text-gtam-blue'>their website</a>.
           </p>
-          <div className="flex items-center justify-end mt-12 mb-4">
-          <div>
+          <div className="flex flex-col items-end mt-12 mb-4 gap-6">
+            <div className="flex items-center justify-end gap-12">
+              <div className="w-[39%] h-auto">
+                <Image
+                  src='/images/redcross_logo.png'
+                  alt="British Red Cross Logo"
+                  className="w-full h-full object-contain"
+                  width={198}
+                  height={198}
+                />
+              </div>
+              <div className="w-[15%] h-auto">
+                <Image
+                  src='/images/website_q4k_logo.png'
+                  alt="British Red Cross Logo"
+                  className="w-full h-full object-contain"
+                  width={198}
+                  height={198}
+                />
+              </div>
+            </div>
+            <div>
               <a
                 href="https://www.redcross.org.uk/"
                 target="_blank"
@@ -130,19 +150,11 @@ const sectionsMobile = [
                 Donate
               </a>
             </div>
-            <div className="ml-12 w-[15%] h-auto">
-              <Image
-                src='/images/website_q4k_logo.png'
-                alt="British Red Cross Logo"
-                className="w-full h-full object-contain"
-                width={198} height={198}
-              />
-            </div>
           </div>
         </div>
       </div>
     ),
-  },  
+  },
   {
     id: 'merch',
     backgroundColor: '#12222c',
@@ -315,7 +327,7 @@ const sectionsDesktop = [
     bottom: { left: 25, right: 15 },
     content: (
       <h1 className="text-5xl text-white uppercase font-europagrotesk mx-auto max-w-[100%] translate-x-[-50%] relative left-1/2">
-        It&apos;s time to <span className="text-gtam-yellow">meet</span>.
+        We are<span className="text-gtam-yellow"> back</span>.
       </h1>
     ),
   },
@@ -388,7 +400,7 @@ const sectionsDesktop = [
   },
   {
     id: 'charity',
-    imageSrc: '/images/website_warchild_bg.png', //TODO New Background Image
+    imageSrc: '/images/website_redcross_bg.png',
     backgroundColor: '#12222c',
     backgroundOffset: "center 650px",
     top: { left: 75, right: 65 },
@@ -413,23 +425,35 @@ const sectionsDesktop = [
               their website
             </a>.
           </p>
-          <div className="flex items-center justify-center lg:justify-end mt-12 mb-4">
+          <div className="flex flex-col items-center lg:items-end mt-12 mb-4 gap-6">
+            <div className="flex items-center justify-center lg:justify-end gap-14 max-xl:gap-6">
+              <div className="w-[39%] h-auto max-xl:w-[22%]">
+                <Image
+                  src='/images/redcross_logo.png'
+                  alt="British Red Cross Logo"
+                  className="w-full h-full object-contain"
+                  width={198}
+                  height={198}
+                />
+              </div>
+              <div className="w-[15%] h-auto max-xl:w-[22%]">
+                <Image
+                  src='/images/website_q4k_logo.png'
+                  alt="British Red Cross Logo"
+                  className="w-full h-full object-contain"
+                  width={198}
+                  height={198}
+                />
+              </div>
+            </div>
             <a
               href="https://www.redcross.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gtam-yellow text-black py-[3px] px-4 inline-block uppercase font-europagrotesk text-[45px] font-black max-xl:text-6xl transition duration-300 ease-in-out hover:bg-white hover:scale-110"
+              className="bg-gtam-yellow text-black py-[3px] px-8 inline-block uppercase font-europagrotesk text-[45px] font-black max-xl:text-6xl transition duration-300 ease-in-out hover:bg-white hover:scale-110"
             >
               Donate
             </a>
-            <div className="ml-12 w-[15%] h-auto max-xl:hidden">
-              <Image
-                src='/images/website_q4k_logo.png'
-                alt="British Red Cross Logo"
-                className="w-full h-full object-contain"
-                width={198} height={198}
-              />
-            </div>
           </div>
         </div>
       </div>
