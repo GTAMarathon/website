@@ -11,7 +11,6 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'gtam-dark': '#12222c',
         'gtam-yellow': '#ffea00',
         'gtam-blue': '#4fbafe'
       },
