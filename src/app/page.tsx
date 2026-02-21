@@ -123,7 +123,7 @@ const sectionsMobile = [
             <div className="flex items-center justify-end gap-12">
               <div className="w-[39%] h-auto">
                 <Image
-                  src='/images/redcross_logo.png'
+                  src='/images/website_redcross_logo.png'
                   alt="British Red Cross Logo"
                   className="w-full h-full object-contain"
                   width={198}
@@ -429,7 +429,7 @@ const sectionsDesktop = [
             <div className="flex items-center justify-center lg:justify-end gap-14 max-xl:gap-6">
               <div className="w-[39%] h-auto max-xl:w-[22%]">
                 <Image
-                  src='/images/redcross_logo.png'
+                  src='/images/website_redcross_logo.png'
                   alt="British Red Cross Logo"
                   className="w-full h-full object-contain"
                   width={198}
