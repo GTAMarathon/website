@@ -208,7 +208,7 @@ const sectionsMobile = [
         </p>
         <div className="xl:absolute xl:left-[-550px] xl:top-1/2 xl:transform xl:-translate-y-1/2 max-xl:w-full">
           <a
-            href="https://gist.github.com/Joshimuz/d6584ef380e04447639c27b909003e52"
+            href="https://gist.github.com/Joshimuz/7241b552c078157eab93b2db3c056738"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gtam-yellow text-black py-3 px-6 font-bold text-xl inline-block uppercase font-europagrotesk text-[40px] transition duration-300 ease-in-out hover:bg-white hover:scale-110"
@@ -523,7 +523,7 @@ const sectionsDesktop = [
         </p>
         <div className="xl:absolute xl:left-[-784px] xl:top-1/2 xl:transform xl:-translate-y-1/2 max-xl:w-full">
           <a
-            href="https://gist.github.com/Joshimuz/d6584ef380e04447639c27b909003e52"
+            href="https://gist.github.com/Joshimuz/7241b552c078157eab93b2db3c056738"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gtam-yellow text-black py-[3px] px-4 font-black inline-block uppercase font-europagrotesk 
