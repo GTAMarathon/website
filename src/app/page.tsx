@@ -219,16 +219,18 @@ const sectionsMobile = [
           SCHEDULE
         </h1>
         <p className="text-[18px]/[24px] text-white mt-8 mb-8 font-centurygothic">
-          Stay tuned for more information!
+          The long awaited list is here. Click to see the official schedule for 
+          <span className="font-slopeopera"> GTA<span className="font-slopeopera text-gtam-blue">M</span> 2026</span>!
+          Times are subject to change, so check back here occasionally to stay up to date with the runs on show!
         </p>
         <div className="mt-12">
           <a
-            href="https://oengus.io/marathon/gtam2026/schedule/gtam2026" //TODO no schedule yet
+            href="https://oengus.io/marathon/gtam2026/schedule/main"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gtam-yellow text-black py-3 px-6 font-bold text-[40px] inline-block uppercase font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110 pointer-events-none"
+            className="bg-gtam-yellow text-black py-3 px-6 font-bold text-[40px] inline-block uppercase font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
-            coming soon
+            go to schedule
           </a>
         </div>
       </div>
@@ -529,16 +531,18 @@ const sectionsDesktop = [
           SCHEDULE
         </h1>
         <p className="text-[20px] text-white mt-5 mb-8 max-xl:text-base font-centurygothic">
-        Stay tuned for more information!
+          The long awaited list is here. Click to see the official schedule for 
+          <span className="font-slopeopera"> GTA<span className="font-slopeopera text-gtam-blue">M</span> 2026</span>!
+          Times are subject to change, so check back here occasionally to stay up to date with the runs on show!
         </p>
         <div className="mt-12">
           <a
-            href="https://oengus.io/marathon/gtam2026/schedule/gtam2026" //TODO no schedule yet
+            href="https://oengus.io/marathon/gtam2026/schedule/main"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gtam-yellow text-black py-[3px] px-4 font-bold text-[45px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110 pointer-events-none"
+            className="bg-gtam-yellow text-black py-[3px] px-4 font-bold text-[45px] inline-block uppercase max-xl:text-lg font-europagrotesk transition duration-300 ease-in-out hover:bg-white hover:scale-110"
           >
-            coming soon
+            go to schedule
           </a>
         </div>
       </div>
