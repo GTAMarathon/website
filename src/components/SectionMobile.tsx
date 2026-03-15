@@ -14,13 +14,21 @@ interface SectionMobileProps {
     right: number;
   };
   backgroundOffset?: string;
+  contentAlign?: 'left' | 'center' | 'right';
+  verticalOffset?: number;
 }
 
-const SectionMobile: React.FC<SectionMobileProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset }) => {
+const SectionMobile: React.FC<SectionMobileProps> = ({ id, imageSrc, backgroundColor, children, top, bottom, backgroundOffset, contentAlign = 'center', verticalOffset = 0 }) => {
   
   const sectionHeight = Math.max(top.left + bottom.left, top.right + bottom.right);
   const overlap = Math.max(top.left, top.right);
   const toPercent = (value: number) => (value / sectionHeight) * 100;
+
+  const leftMid = top.left + bottom.left / 2;
+  const rightMid = top.right + bottom.right / 2;
+  const centerPercent = toPercent((leftMid + rightMid) / 2);
+
+  const alignClass = contentAlign === 'left' ? 'items-start' : contentAlign === 'right' ? 'items-end' : 'items-center';
 
   return (
     <section
@@ -34,7 +42,7 @@ const SectionMobile: React.FC<SectionMobileProps> = ({ id, imageSrc, backgroundC
       }}
     >
       <div 
-        className="relative h-full flex items-center justify-center responsive-bg"
+        className="absolute inset-0 responsive-bg"
         style={{
           backgroundColor: backgroundColor,
           backgroundImage: `url(${imageSrc})`,
@@ -46,18 +54,16 @@ const SectionMobile: React.FC<SectionMobileProps> = ({ id, imageSrc, backgroundC
             100% ${toPercent(top.right + bottom.right)}%,
             0 ${toPercent(top.left + bottom.left)}%
           )`,
-          overflow: "visible",
         }}
       >
-        <div className="relative h-full flex items-center p-8"
+        <div className={`absolute left-0 right-0 flex flex-col ${alignClass} px-6`}
         style={{
+          top: `calc(${centerPercent}% + ${verticalOffset}vh)`,
           pointerEvents: 'auto',
           zIndex: 20,
-          transform: 'translateZ(0)'
+          transform: 'translateY(-50%)'
         }}>
-          <div className="max-w-4xl mx-auto w-full relative">
-            {children}
-          </div>
+          {children}
         </div>
       </div>
     </section>
